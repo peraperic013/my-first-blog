@@ -4,13 +4,20 @@
     </head>
 
     <body>
-      <p>Hi there!</p>
+      <!--<p>Hi there!</p>
       <p>It works!</p>
       <em>Pera detlic</em>
       <br />
       <div>
           <a href="http:\\www.youtube.com">Go to YT</a>
-      </div>
+      </div>-->
+      {% for post in posts %}
+          <div>
+              <p>published: {{ post.publish_date }}</p>
+              <h1><a href="">{{ post.title }}</a></h1>
+              <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+      {% endfor %}
     </body>
 </html>
 
